@@ -1,0 +1,969 @@
+\hypertarget{isofc-service_8py}{}\section{Файл isofc-\/service.py}
+\label{isofc-service_8py}\index{isofc-\/service.\+py@{isofc-\/service.\+py}}
+
+
+Данный файл представляет собой сервис, который должен быть постоянно запущен на компьютере с доступом к S\+A\+M\+BA серверу  
+
+
+\subsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classisofc-service_1_1MainWindow}{isofc-\/service.\+Main\+Window}}
+\item 
+class \mbox{\hyperlink{classisofc-service_1_1MainThread}{isofc-\/service.\+Main\+Thread}}
+\begin{DoxyCompactList}\small\item\em Тред окна, заменить на собственный директор \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{isofc-service_8py_a5cea1ede56356bb641ac929c378c1dd8}{isofc-\/service.\+Log}} (message=\char`\"{}\textbackslash{}, include\+\_\+info=True)
+\begin{DoxyCompactList}\small\item\em Функция логирования сообщения с указанием даты \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a5985ea75b9e7f9724d6cb7e742afc890}{isofc-\/service.\+Device\+Handler\+Exception\+Wrapper}} (action, device)
+\begin{DoxyCompactList}\small\item\em Обработчик ошибок для Device Handler. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a72ca4fb69431072fffb6ac2059236878}{isofc-\/service.\+Device\+Handler}} (action, device)
+\begin{DoxyCompactList}\small\item\em Обработчик состояния устройства \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a93c21c62e6b4cc45c8128d485d9709fb}{isofc-\/service.\+Smb\+Net\+Fs\+Init}} (Smb\+Directory)
+\begin{DoxyCompactList}\small\item\em Функция инициализации Samba-\/подключения \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_ab5986a73f27475fd45ad29ad87d7fc0a}{isofc-\/service.\+Smb\+Net\+Fs\+Close}} (Smb\+Directory)
+\begin{DoxyCompactList}\small\item\em Функция закрытия Samba-\/подключения \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_af127619d58278714c207c58f6d85d52b}{isofc-\/service.\+Smb\+Authp}} (Credentials)
+\begin{DoxyCompactList}\small\item\em Функция аутефикации на Samba-\/сервере \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a3a76537b729e2a715e4c0c781f59f322}{isofc-\/service.\+base64p}} (string)
+\begin{DoxyCompactList}\small\item\em Функция проверки на кодировку base64. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a0eba86fbc79aa01ca16b5fd058c85638}{isofc-\/service.\+Decrypt}} (ciphertext)
+\begin{DoxyCompactList}\small\item\em Функция расшифровки файла с данными авторизации \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_ae80f4771b0644a980f33148b21453267}{isofc-\/service.\+Check\+Auth}} (device, usbdirectory)
+\begin{DoxyCompactList}\small\item\em Функция проверки аутефикации на Samba-\/сервере \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{isofc-service_8py_a104b32abfb43e0783756cc675951fe97}\label{isofc-service_8py_a104b32abfb43e0783756cc675951fe97}} 
+def {\bfseries isofc-\/service.\+Status\+Set} (device, message, color)
+\item 
+def \mbox{\hyperlink{isofc-service_8py_ade5fb73a2623e6354a2453b612e1943b}{isofc-\/service.\+Status}} (device)
+\begin{DoxyCompactList}\small\item\em Функция получения статуса устройства \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_ad73dd86c759cc2bab83e283b1ec6f40e}{isofc-\/service.\+list\+\_\+files}} (startpath)
+\begin{DoxyCompactList}\small\item\em Функция листинга файлов \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a316116b0d70bb8af538da4fab408d0cf}{isofc-\/service.\+directory\+List}} (path, regex=\textquotesingle{}.$\ast$\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Функция листинга папок \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a6d7f6ce07faf5f5b2588f8717407ca3b}{isofc-\/service.\+get\+\_\+in\+\_\+out}} (root\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Функция получения листинга папок in и out. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a50b9ec7706ed7d16a1a8a40d544e86da}{isofc-\/service.\+update\+\_\+files}} (usb\+\_\+dir, files)
+\begin{DoxyCompactList}\small\item\em Функция обновлени файлов на флешке \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a439962da72c4d0e197a5e8247af9f379}{isofc-\/service.\+gpg\+\_\+decrypt}} (path\+\_\+to\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Функция верификации gpg. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a2121e73bea9129e558eba2f542c9ae75}{isofc-\/service.\+do\+\_\+admin\+\_\+work}} (usb\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Функция обновления системы isofc. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_ac3a9b4525481c6bc4b39f8c382294cf3}{isofc-\/service.\+Transfer}} (device, Usb\+Directory, Credentials)
+\begin{DoxyCompactList}\small\item\em Функция обмена данными между флешкой и сетевым диском \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_ad9952a920fb26ea812b546c82bf64db4}{isofc-\/service.\+Port}} (device)
+\begin{DoxyCompactList}\small\item\em Функция проброски портов \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_ad24525bcc431f0f8c030e24bed019a6f}{isofc-\/service.\+Usb\+Mount}} (device)
+\begin{DoxyCompactList}\small\item\em Функция монтирования usb. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a8078bdb80f1dc3e035795dbceec779aa}{isofc-\/service.\+Usb\+Umount}} (device)
+\begin{DoxyCompactList}\small\item\em Функция размонтирования usb. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{isofc-service_8py_a7d6f596c01260b208bc72a0c7722337f}{isofc-\/service.\+getstatusoutput}} (cmd, shell=True, timeout=0, logging=False)
+\begin{DoxyCompactList}\small\item\em Функция получения ответа от системной команды \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{isofc-service_8py_a86c2854b086f3034ce6820a9db41f34b}{isofc-\/service.\+Status\+Msg}}
+\begin{DoxyCompactList}\small\item\em Сообщения для вывода на дисплей \end{DoxyCompactList}\item 
+dictionary {\bfseries isofc-\/service.\+Status\+Clrs}
+\item 
+\mbox{\Hypertarget{isofc-service_8py_a1a05ad08514211f9ef48bee10308ea73}\label{isofc-service_8py_a1a05ad08514211f9ef48bee10308ea73}} 
+string {\bfseries isofc-\/service.\+Port} = \char`\"{}Port\char`\"{} + str(Port\+Num) + \char`\"{}Status\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Данный файл представляет собой сервис, который должен быть постоянно запущен на компьютере с доступом к S\+A\+M\+BA серверу 
+
+Что-\/то надо сюда дописать 
+
+\subsection{Функции}
+\mbox{\Hypertarget{isofc-service_8py_file_a3a76537b729e2a715e4c0c781f59f322}\label{isofc-service_8py_file_a3a76537b729e2a715e4c0c781f59f322}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!base64p@{base64p}}
+\index{base64p@{base64p}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{base64p()}{base64p()}}
+{\footnotesize\ttfamily def isofc-\/service.\+base64p (\begin{DoxyParamCaption}\item[{}]{string }\end{DoxyParamCaption})}
+
+
+
+Функция проверки на кодировку base64. 
+
+Проверка осуществляется с помощью регулярных выражений 
+\begin{DoxyParams}{Аргументы}
+{\em string} & -\/ входная строка \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+267 \textcolor{keyword}{def }base64p(string):
+268     \textcolor{keywordflow}{if} re.match(\textcolor{stringliteral}{'^(?:[A-Za-z0-9+/]\{4\})*'}
+269                         + \textcolor{stringliteral}{'(?:[A-Za-z0-9+/]\{2\}=='}
+270                         + \textcolor{stringliteral}{'|[A-Za-z0-9+/]\{3\}=|[A-Za-z0-9+/]\{4\})$'}, string):
+271         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+272     \textcolor{keywordflow}{else}:
+273         \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+274 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ae80f4771b0644a980f33148b21453267}\label{isofc-service_8py_file_ae80f4771b0644a980f33148b21453267}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Check\+Auth@{Check\+Auth}}
+\index{Check\+Auth@{Check\+Auth}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Check\+Auth()}{CheckAuth()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Check\+Auth (\begin{DoxyParamCaption}\item[{}]{device,  }\item[{}]{usbdirectory }\end{DoxyParamCaption})}
+
+
+
+Функция проверки аутефикации на Samba-\/сервере 
+
+Идет проверка на существование файла ./isofc\+\_\+credentials
+
+Файл расшифровывается, сверяется serial id устройства в usb порте и serial id из файла аутефикации
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ciphertext} & -\/ входная строка (зашифрованный текст) \\
+\hline
+{\em private\+\_\+key\+\_\+path} & -\/ путь к файлу секретного ключа \\
+\hline
+{\em opentext} & -\/ расшифрованный текст \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+310 \textcolor{keyword}{def }CheckAuth(device, usbdirectory):
+311     \textcolor{keywordflow}{try}:
+312         with open(usbdirectory + \textcolor{stringliteral}{"/.isofc\_credentials"}, \textcolor{stringliteral}{"r") as file:}
+313 \textcolor{stringliteral}{            data = file.read().replace('\(\backslash\)n'}, \textcolor{stringliteral}{''})
+314     \textcolor{keywordflow}{except} IOError \textcolor{keyword}{as} exc:
+315         \textcolor{keywordflow}{if} exc.errno == 2:
+316             \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, StatusMsg[\textcolor{stringliteral}{'AuthFileNotFoundError'}]] \textcolor{comment}{# Нет файла аутенфикации}
+317         \textcolor{keywordflow}{else}:
+318             \textcolor{keywordflow}{raise}
+319     Credentials = Decrypt(data) \textcolor{comment}{# функция расшифровки файла аутенфикации}
+320     \textcolor{keywordflow}{if} Credentials == \textcolor{stringliteral}{'Error'}:
+321         \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]]
+322     \textcolor{keywordflow}{try}:
+323         Credentials = json.loads(Credentials)
+324         serial = device[\textcolor{stringliteral}{'ID\_SERIAL\_SHORT'}]
+325     \textcolor{keywordflow}{except}:
+326         \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]]
+327     \textcolor{keywordflow}{if} serial.lower() != Credentials[\textcolor{stringliteral}{'Serial'}].lower():
+328         Log(\textcolor{stringliteral}{"Serial ID in credentials ("} + serial.lower()
+329             + \textcolor{stringliteral}{") is not equal serial ID in usb device ("}
+330             + Credentials[\textcolor{stringliteral}{'Serial'}].lower() + \textcolor{stringliteral}{")"})
+331         \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]]
+332     \textcolor{keywordflow}{return} [\textcolor{keyword}{True}, Credentials[\textcolor{stringliteral}{'Login'}], Credentials[\textcolor{stringliteral}{'Password'}],
+333             serial]
+334 
+335 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a0eba86fbc79aa01ca16b5fd058c85638}\label{isofc-service_8py_file_a0eba86fbc79aa01ca16b5fd058c85638}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Decrypt()}{Decrypt()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Decrypt (\begin{DoxyParamCaption}\item[{}]{ciphertext }\end{DoxyParamCaption})}
+
+
+
+Функция расшифровки файла с данными авторизации 
+
+Идет проверка на существование файла секретного ключа.
+
+Файл расшифровывается последовательно base64 -\/$>$ rsa с помошью секретного ключа 
+\begin{DoxyParams}{Аргументы}
+{\em ciphertext} & -\/ входная строка (зашифрованный текст) \\
+\hline
+{\em private\+\_\+key\+\_\+path} & -\/ путь к файлу секретного ключа \\
+\hline
+{\em opentext} & -\/ расшифрованный текст \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+283 \textcolor{keyword}{def }Decrypt(ciphertext):
+284     \textcolor{keyword}{global} config
+285     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isfile(config.private\_key\_path):
+286         Log(\textcolor{stringliteral}{"Private key not found"})
+287         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Error'}
+288     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} base64p(ciphertext):
+289         Log(\textcolor{stringliteral}{".isofc\_credentials is not base64, Ciphertext = '"}
+290             + str(ciphertext) + \textcolor{stringliteral}{"'"})
+291         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Error'}
+292     retcode, opentext = getstatusoutput(
+293         \textcolor{stringliteral}{"echo "} + ciphertext + \textcolor{stringliteral}{"|base64 -d|openssl rsautl -inkey "}
+294         + config.private\_key\_path + \textcolor{stringliteral}{" -decrypt"})
+295     Log(\textcolor{stringliteral}{"Retcode(decrypt): "} + str(retcode))
+296     \textcolor{keywordflow}{if} retcode == 0:
+297         \textcolor{keywordflow}{return} opentext
+298     \textcolor{keywordflow}{else}:
+299         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Error'}
+300 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a72ca4fb69431072fffb6ac2059236878}\label{isofc-service_8py_file_a72ca4fb69431072fffb6ac2059236878}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Device\+Handler@{Device\+Handler}}
+\index{Device\+Handler@{Device\+Handler}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Device\+Handler()}{DeviceHandler()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Device\+Handler (\begin{DoxyParamCaption}\item[{}]{action,  }\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Обработчик состояния устройства 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & действие, совршаемое над устройством \\
+\hline
+{\em device} & устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+95 \textcolor{keyword}{def }DeviceHandler(action, device):
+96     \textcolor{comment}{# \(\backslash\)todo удалить, связано с GTK}
+97     getstatusoutput([\textcolor{stringliteral}{"xset"}, \textcolor{stringliteral}{"-dpms"}], \textcolor{keyword}{False})
+98     getstatusoutput([\textcolor{stringliteral}{"xset"}, \textcolor{stringliteral}{"+dpms"}], \textcolor{keyword}{False})
+99 
+100     \textcolor{keywordflow}{try}:
+101         Log(\textcolor{stringliteral}{"Port: "} + str(Port(device)) + \textcolor{stringliteral}{", "}
+102             + \textcolor{stringliteral}{"Action: "} + str(action) + \textcolor{stringliteral}{", "}
+103             + \textcolor{stringliteral}{"DEVNAME: "} + str(device[\textcolor{stringliteral}{'DEVNAME'}]) + \textcolor{stringliteral}{", "}
+104             + \textcolor{stringliteral}{"ID\_SERIAL: "} + str(device[\textcolor{stringliteral}{'ID\_SERIAL'}]) + \textcolor{stringliteral}{" "})
+105     \textcolor{keywordflow}{except}:
+106         Log(\textcolor{stringliteral}{"Fail on Port: "} + str(Port(device)) + \textcolor{stringliteral}{", "}
+107             + \textcolor{stringliteral}{"Action: "} + str(action))
+108         \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+109     \textcolor{keyword}{global} Clients, Ports, ExitFlag, RestartFlag
+110     PortLock = \textcolor{stringliteral}{"Port"} + str(Port(device)) + \textcolor{stringliteral}{"Lock"} \textcolor{comment}{# закрытие портов}
+111     exec(\textcolor{stringliteral}{'global '} + PortLock)
+112     \textcolor{keywordflow}{if} str(action) == \textcolor{stringliteral}{"add"}:
+113         \textcolor{keywordflow}{if} len(str(device.device\_node)) == 8:
+114             \textcolor{keywordflow}{if} sum(1 \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} device.children) != 0:
+115                 Log(str(device.device\_node)
+116                     + \textcolor{stringliteral}{" is not mount (partition table)"})
+117                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+118                 exec(PortLock + \textcolor{stringliteral}{'.acquire()'}, locals(), globals())
+119         \textcolor{keywordflow}{if} list(filter(\textcolor{keyword}{lambda} pt: pt == Port(device), Ports)):
+120             Log(str(device.device\_node) + \textcolor{stringliteral}{" will not be served"})
+121             exec(PortLock + \textcolor{stringliteral}{'.release()'}, locals(), globals())
+122             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+123         StatusSet(device, StatusMsg[\textcolor{stringliteral}{'Connected'}],
+124                   StatusClrs[\textcolor{stringliteral}{'Normal'}])
+125         retval, usbdirectory = UsbMount(device)
+126         \textcolor{keywordflow}{if} retval != 0:
+127             Log(\textcolor{stringliteral}{"Cannot mount "} + str(device.device\_node))
+128             \textcolor{keywordflow}{if} Status(device) != StatusMsg[\textcolor{stringliteral}{'Free'}]:
+129                 StatusSet(device, StatusMsg[\textcolor{stringliteral}{'MountError'}],
+130                           StatusClrs[\textcolor{stringliteral}{'Error'}])
+131                 \textcolor{keywordflow}{try}:
+132                     exec(PortLock + \textcolor{stringliteral}{'.release()'}, locals(), globals())
+133                 \textcolor{keywordflow}{except}:
+134                     \textcolor{keywordflow}{pass}
+135             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+136         Log(str(device.device\_node) + \textcolor{stringliteral}{" mounted"})
+137         Credentials = CheckAuth(device, usbdirectory)
+138         \textcolor{keywordflow}{if} Credentials[0] \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keyword}{True}:
+139             StatusSet(device, Credentials[1],
+140                       StatusClrs[\textcolor{stringliteral}{'Error'}])
+141             \textcolor{keywordflow}{if} Credentials[1] == StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]:
+142                 Ports.append(Port(device))
+143         \textcolor{keywordflow}{else}:
+144             Log(str(device.device\_node) + \textcolor{stringliteral}{", "} + \textcolor{stringliteral}{"Login: "} + Credentials[1] + \textcolor{stringliteral}{", "} + \textcolor{stringliteral}{"Serial: "} + 
+      Credentials[3])
+145             Ports.append(Port(device))
+146             exec(PortLock + \textcolor{stringliteral}{'.release()'}, locals(), globals())
+147             ClientsLock.acquire()
+148             \textcolor{keywordflow}{if} list(filter(\textcolor{keyword}{lambda} cl: cl[1] == Credentials[1],
+149                            Clients)):
+150                 StatusSet(device, StatusMsg[\textcolor{stringliteral}{'MoreOneLogin'}], \textcolor{comment}{# если больше одного логина}
+151                           StatusClrs[\textcolor{stringliteral}{'Error'}])
+152                 ClientsLock.release()
+153             \textcolor{keywordflow}{else}:
+154                 Clients.append([device.device\_node, Credentials[1]])
+155                 ClientsLock.release()
+156                 StatusSet(device, StatusMsg[\textcolor{stringliteral}{'Connecting'}],
+157                           StatusClrs[\textcolor{stringliteral}{'Normal'}])
+158                 smb\_auth\_result = SmbAuthp(Credentials)
+159                 \textcolor{keywordflow}{if} smb\_auth\_result == 0:
+160                     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} Transfer(device,
+161                                     usbdirectory,
+162                                     Credentials):
+163                         StatusSet(device,
+164                                   StatusMsg[\textcolor{stringliteral}{'TransferError'}],
+165                                   StatusClrs[\textcolor{stringliteral}{'Error'}])
+166                     \textcolor{keywordflow}{else}:
+167                         Log(str(device.device\_node) + \textcolor{stringliteral}{" All good"})
+168                 \textcolor{keywordflow}{elif} smb\_auth\_result == 256:  \textcolor{comment}{# timeout}
+169                     StatusSet(device,
+170                               StatusMsg[\textcolor{stringliteral}{'ConnectingError'}],
+171                               StatusClrs[\textcolor{stringliteral}{'Error'}])
+172                 \textcolor{keywordflow}{else}:
+173                     StatusSet(device,
+174                               StatusMsg[\textcolor{stringliteral}{'AuthSmbError'}], \textcolor{comment}{# ошибка аутенфикации samba}
+175                               StatusClrs[\textcolor{stringliteral}{'Error'}])
+176                     Log(str(device.device\_node) + \textcolor{stringliteral}{", wrong credentials"})
+177         \textcolor{keywordflow}{if} UsbUmount(device) != 0:
+178             Log(str(device.device\_node) + \textcolor{stringliteral}{", failed umount"})
+179             StatusSet(device, StatusMsg[\textcolor{stringliteral}{'UmountError'}],
+180                       StatusClrs[\textcolor{stringliteral}{'Error'}])
+181         \textcolor{comment}{# \(\backslash\)todo : удалить, связано с GTK}
+182             \textcolor{keywordflow}{try}:
+183                 exec(PortLock + \textcolor{stringliteral}{'.release()'}, locals(), globals())
+184             \textcolor{keywordflow}{except}:
+185                 \textcolor{keywordflow}{pass}
+186         \textcolor{comment}{#}
+187     \textcolor{keywordflow}{if} str(action) == \textcolor{stringliteral}{"remove"}:
+188         Clients = list(filter(
+189             \textcolor{keyword}{lambda} cl: cl[0] != device.device\_node, Clients))
+190         Ports = list(filter(\textcolor{keyword}{lambda} pt: pt != Port(device), Ports))
+191 \textcolor{comment}{# \(\backslash\)todo : удалить, связано с GTK}
+192         \textcolor{keywordflow}{try}:
+193             exec(PortLock + \textcolor{stringliteral}{'.release()'}, locals(), globals())
+194         \textcolor{keywordflow}{except}:
+195             \textcolor{keywordflow}{pass}
+196         \textcolor{comment}{#}
+197 
+198         StatusSet(device, StatusMsg[\textcolor{stringliteral}{'Free'}],
+199                   StatusClrs[\textcolor{stringliteral}{'Normal'}])
+200         \textcolor{keywordflow}{if} len(Ports) == 0 \textcolor{keywordflow}{and} ExitFlag:
+201             RestartFlag = \textcolor{keyword}{True}
+202             ExitFlag = \textcolor{keyword}{False}
+203 
+204 
+205 \textcolor{comment}{# \(\backslash\)todo  удалить, связано с GTK}
+206         \textcolor{keywordflow}{try}:
+207             \textcolor{keyword}{global} Gtk
+208             Log(\textcolor{stringliteral}{"Gtk main\_quit"})
+209             Gtk.main\_quit()
+210         \textcolor{keywordflow}{except}:
+211             ExitFlag = \textcolor{keyword}{True}
+212 \textcolor{comment}{#}
+213 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a5985ea75b9e7f9724d6cb7e742afc890}\label{isofc-service_8py_file_a5985ea75b9e7f9724d6cb7e742afc890}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Device\+Handler\+Exception\+Wrapper@{Device\+Handler\+Exception\+Wrapper}}
+\index{Device\+Handler\+Exception\+Wrapper@{Device\+Handler\+Exception\+Wrapper}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Device\+Handler\+Exception\+Wrapper()}{DeviceHandlerExceptionWrapper()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Device\+Handler\+Exception\+Wrapper (\begin{DoxyParamCaption}\item[{}]{action,  }\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Обработчик ошибок для Device Handler. 
+
+В случае возникновения исключение сообщение логируется 
+\begin{DoxyParams}{Аргументы}
+{\em action} & действие, совршаемое над устройством \\
+\hline
+{\em device} & устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+84 \textcolor{keyword}{def }DeviceHandlerExceptionWrapper(action, device):
+85     \textcolor{keywordflow}{try}:
+86         DeviceHandler(action, device)
+87     \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e:
+88         Log(str(e))
+89 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a316116b0d70bb8af538da4fab408d0cf}\label{isofc-service_8py_file_a316116b0d70bb8af538da4fab408d0cf}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!directory\+List@{directory\+List}}
+\index{directory\+List@{directory\+List}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{directory\+List()}{directoryList()}}
+{\footnotesize\ttfamily def isofc-\/service.\+directory\+List (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{regex = {\ttfamily \textquotesingle{}.$\ast$\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Функция листинга папок 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em path} & -\/ путь до папки \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+371 \textcolor{keyword}{def }directoryList(path, regex='.*'):
+372     \textcolor{keywordflow}{return} [o \textcolor{keywordflow}{for} o \textcolor{keywordflow}{in} os.listdir(path)
+373             \textcolor{keywordflow}{if} os.path.isdir(os.path.join(path, o))
+374             \textcolor{keywordflow}{and} re.match(regex, o)]
+375 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a2121e73bea9129e558eba2f542c9ae75}\label{isofc-service_8py_file_a2121e73bea9129e558eba2f542c9ae75}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!do\+\_\+admin\+\_\+work@{do\+\_\+admin\+\_\+work}}
+\index{do\+\_\+admin\+\_\+work@{do\+\_\+admin\+\_\+work}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{do\+\_\+admin\+\_\+work()}{do\_admin\_work()}}
+{\footnotesize\ttfamily def isofc-\/service.\+do\+\_\+admin\+\_\+work (\begin{DoxyParamCaption}\item[{}]{usb\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Функция обновления системы isofc. 
+
+Если вставленная флешка прошла аутекацию как админ, файлы системы обновляются
+
+
+\begin{DoxyParams}{Аргументы}
+{\em usb\+\_\+in} & -\/ путь до папки in на флешке \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+452 \textcolor{keyword}{def }do\_admin\_work(usb\_in):
+453     \textcolor{keyword}{global} config
+454     update\_files(usb\_in, [\textcolor{stringliteral}{"isofc-service.py"},
+455                           \textcolor{stringliteral}{"isofc-service.conf"}])
+456 
+457     getstatusoutput([\textcolor{stringliteral}{"/bin/cp"},
+458                      config.log\_filepath,
+459                      usb\_in + \textcolor{stringliteral}{"/"}],
+460                     shell=\textcolor{keyword}{False})
+461 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a6d7f6ce07faf5f5b2588f8717407ca3b}\label{isofc-service_8py_file_a6d7f6ce07faf5f5b2588f8717407ca3b}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!get\+\_\+in\+\_\+out@{get\+\_\+in\+\_\+out}}
+\index{get\+\_\+in\+\_\+out@{get\+\_\+in\+\_\+out}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{get\+\_\+in\+\_\+out()}{get\_in\_out()}}
+{\footnotesize\ttfamily def isofc-\/service.\+get\+\_\+in\+\_\+out (\begin{DoxyParamCaption}\item[{}]{root\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Функция получения листинга папок in и out. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em root\+\_\+path} & -\/ путь до сетевого диска \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+378 \textcolor{keyword}{def }get\_in\_out(root\_path):
+379     ins = directoryList(root\_path, \textcolor{stringliteral}{'^(?i)in$'})
+380     outs = directoryList(root\_path, \textcolor{stringliteral}{'^(?i)out$'})
+381     ins.sort(reverse=\textcolor{keyword}{True})
+382     outs.sort(reverse=\textcolor{keyword}{True})
+383     \textcolor{keywordflow}{try}:
+384         \_in = ins[0]
+385     \textcolor{keywordflow}{except} IndexError:
+386         \_in = \textcolor{stringliteral}{"in"}
+387     \textcolor{keywordflow}{try}:
+388         \_out = outs[0]
+389     \textcolor{keywordflow}{except} IndexError:
+390         \_out = \textcolor{stringliteral}{"out"}
+391     \textcolor{keywordflow}{return} (root\_path + \textcolor{stringliteral}{"/"} + \_in + \textcolor{stringliteral}{"/"},
+392             root\_path + \textcolor{stringliteral}{"/"} + \_out + \textcolor{stringliteral}{"/"})
+393 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a7d6f596c01260b208bc72a0c7722337f}\label{isofc-service_8py_file_a7d6f596c01260b208bc72a0c7722337f}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!getstatusoutput@{getstatusoutput}}
+\index{getstatusoutput@{getstatusoutput}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{getstatusoutput()}{getstatusoutput()}}
+{\footnotesize\ttfamily def isofc-\/service.\+getstatusoutput (\begin{DoxyParamCaption}\item[{}]{cmd,  }\item[{}]{shell = {\ttfamily True},  }\item[{}]{timeout = {\ttfamily 0},  }\item[{}]{logging = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Функция получения ответа от системной команды 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cmd} & -\/ исполняема команда \\
+\hline
+{\em shell} & -\/ нужно ли открытие shell \\
+\hline
+{\em logging} & -\/ нужно ли логирование \begin{DoxyVerb}Return (status, output) of executing cmd in a shell.\end{DoxyVerb}
+ \begin{DoxyVerb}This new implementation should work on all platforms.\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+567 \textcolor{keyword}{def }getstatusoutput(cmd, shell=True, timeout=0, logging=False):
+568     \textcolor{stringliteral}{"""Return (status, output) of executing cmd in a shell."""}
+569     \textcolor{stringliteral}{"""This new implementation should work on all platforms."""}
+570     pipe = subprocess.Popen(cmd, shell=shell,
+571                             universal\_newlines=\textcolor{keyword}{True},
+572                             stdout=subprocess.PIPE,
+573                             stderr=subprocess.STDOUT)
+574     deadline = time.time() + timeout
+575     \textcolor{keywordflow}{if} timeout:
+576         \textcolor{keywordflow}{while} pipe.poll() \textcolor{keywordflow}{is} \textcolor{keywordtype}{None} \textcolor{keywordflow}{and} time.time() < deadline:
+577             time.sleep(.250)
+578         \textcolor{keywordflow}{if} pipe.poll() \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+579             pipe.terminate()
+580             \textcolor{keywordflow}{return} 256, \textcolor{stringliteral}{""}
+581     sts = pipe.wait()
+582     output = str.join(\textcolor{stringliteral}{""}, pipe.stdout.readlines())
+583     \textcolor{keywordflow}{if} sts \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+584         sts = 0
+585     \textcolor{keywordflow}{if} logging \textcolor{keywordflow}{and} (sts != 0):
+586         Log(output)
+587     \textcolor{keywordflow}{return} sts, output
+588 
+589 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a439962da72c4d0e197a5e8247af9f379}\label{isofc-service_8py_file_a439962da72c4d0e197a5e8247af9f379}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!gpg\+\_\+decrypt@{gpg\+\_\+decrypt}}
+\index{gpg\+\_\+decrypt@{gpg\+\_\+decrypt}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{gpg\+\_\+decrypt()}{gpg\_decrypt()}}
+{\footnotesize\ttfamily def isofc-\/service.\+gpg\+\_\+decrypt (\begin{DoxyParamCaption}\item[{}]{path\+\_\+to\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Функция верификации gpg. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em path\+\_\+to\+\_\+file} & -\/ путь до файла \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+434 \textcolor{keyword}{def }gpg\_decrypt(path\_to\_file):
+435     orig\_file = path\_to\_file.replace(\textcolor{stringliteral}{'.gpg'}, \textcolor{stringliteral}{''})
+436     getstatusoutput(\textcolor{stringliteral}{"rm "} + orig\_file)
+437     status, output = getstatusoutput(\textcolor{stringliteral}{"gpg "} + path\_to\_file)
+438     Log(\textcolor{stringliteral}{"Status: "} + str(status) + \textcolor{stringliteral}{"; "} + output.replace(\textcolor{stringliteral}{'\(\backslash\)n'}, \textcolor{stringliteral}{'; '}))
+439     \textcolor{keywordflow}{if} status == 0 \textcolor{keywordflow}{and} re.findall(\textcolor{stringliteral}{'ID '} + config.admin\_rsa\_id,
+440                                   output.splitlines()[0]):
+441         Log(\textcolor{stringliteral}{"Gpg verify: true sign"})
+442         \textcolor{keywordflow}{return} orig\_file
+443     \textcolor{keywordflow}{else}:
+444         Log(\textcolor{stringliteral}{"Gpg verify: bad sign"})
+445         \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+446 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ad73dd86c759cc2bab83e283b1ec6f40e}\label{isofc-service_8py_file_ad73dd86c759cc2bab83e283b1ec6f40e}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!list\+\_\+files@{list\+\_\+files}}
+\index{list\+\_\+files@{list\+\_\+files}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{list\+\_\+files()}{list\_files()}}
+{\footnotesize\ttfamily def isofc-\/service.\+list\+\_\+files (\begin{DoxyParamCaption}\item[{}]{startpath }\end{DoxyParamCaption})}
+
+
+
+Функция листинга файлов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em startpath} & -\/ начальная папка \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+360 \textcolor{keyword}{def }list\_files(startpath):
+361     \textcolor{keywordflow}{for} root, dirs, files \textcolor{keywordflow}{in} os.walk(startpath):
+362         level = root.replace(startpath, \textcolor{stringliteral}{''}).count(os.sep)
+363         indent = \textcolor{stringliteral}{' '} * 4 * (level)
+364         Log(\textcolor{stringliteral}{'\{\}\{\}/'}.format(indent, os.path.basename(root)))
+365         subindent = \textcolor{stringliteral}{' '} * 4 * (level + 1)
+366         \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} files:
+367             Log(\textcolor{stringliteral}{'\{\}\{\}'}.format(subindent, f))
+368 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a5cea1ede56356bb641ac929c378c1dd8}\label{isofc-service_8py_file_a5cea1ede56356bb641ac929c378c1dd8}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Log@{Log}}
+\index{Log@{Log}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Log (\begin{DoxyParamCaption}\item[{}]{message = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}},  }\item[{}]{include\+\_\+info = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Функция логирования сообщения с указанием даты 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Логируемое сообщение \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+66 \textcolor{keyword}{def }Log(message="\(\backslash\)n",include\_info=True):
+67     \textcolor{keyword}{global} config
+68     \textcolor{keywordflow}{if} include\_info:
+69         log\_message = str(str(time.strftime(\textcolor{stringliteral}{"[%d %b %Y %H:%M:%S] ("}))
+70                         + current\_thread().name + \textcolor{stringliteral}{") "} + str(message))
+71     \textcolor{keywordflow}{else}:
+72         log\_message = str(message)
+73     print(log\_message)
+74     with open(config.log\_filepath, \textcolor{stringliteral}{"a+"}) \textcolor{keyword}{as} f:
+75         f.write(log\_message + \textcolor{stringliteral}{"\(\backslash\)n"})
+76 
+77 
+78 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ad9952a920fb26ea812b546c82bf64db4}\label{isofc-service_8py_file_ad9952a920fb26ea812b546c82bf64db4}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Port@{Port}}
+\index{Port@{Port}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Port()}{Port()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Port (\begin{DoxyParamCaption}\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция проброски портов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Необходимо сделать}
+\item[\mbox{\hyperlink{todo__todo000001}{Необходимо сделать}}]заменить на 2 порта \end{DoxyRefDesc}
+
+\begin{DoxyCode}
+530 \textcolor{keyword}{def }Port(device):
+531     \textcolor{keywordflow}{return} \{
+532         \textcolor{stringliteral}{'4'}: 7,
+533         \textcolor{stringliteral}{'3'}: 6,
+534         \textcolor{stringliteral}{'7'}: 5,
+535         \textcolor{stringliteral}{'2'}: 4,
+536         \textcolor{stringliteral}{'1'}: 3,
+537         \textcolor{stringliteral}{'6'}: 2,
+538         \textcolor{stringliteral}{'5'}: 1,
+539     \}[str(device.device\_path)[46]]
+540 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_af127619d58278714c207c58f6d85d52b}\label{isofc-service_8py_file_af127619d58278714c207c58f6d85d52b}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Smb\+Authp@{Smb\+Authp}}
+\index{Smb\+Authp@{Smb\+Authp}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Smb\+Authp()}{SmbAuthp()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Smb\+Authp (\begin{DoxyParamCaption}\item[{}]{Credentials }\end{DoxyParamCaption})}
+
+
+
+Функция аутефикации на Samba-\/сервере 
+
+Выполняет подключение к Samba-\/серверу с помощью команды ls
+
+Обрашение к папке на сервере происходит в виде\+:
+
+
+\begin{DoxyCode}
+/bin/ls папка\_самбы/логин:пароль@ip\_адрес/логин
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Аргументы}
+{\em Credentials} & -\/ данные для авторизации \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+251 \textcolor{keyword}{def }SmbAuthp(Credentials):
+252     \textcolor{keyword}{global} config
+253     Login, Password = Credentials[1], Credentials[2]
+254     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} re.match(\textcolor{stringliteral}{'^[a-zA-Z0-9]*$'}, Login):
+255         Log(\textcolor{stringliteral}{"login contain unacceptable symbols: "} + str(Login))
+256         \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+257     \textcolor{keywordflow}{return} getstatusoutput([\textcolor{stringliteral}{"/bin/ls"}, config.smbnetfs\_directory
+258                             + \textcolor{stringliteral}{"/"} + Login
+259                             + \textcolor{stringliteral}{":"} + Password
+260                             + \textcolor{stringliteral}{"@"} + config.server\_ip + \textcolor{stringliteral}{"/"}
+261                             + Login], \textcolor{keyword}{False}, timeout=20)[0]
+262 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ab5986a73f27475fd45ad29ad87d7fc0a}\label{isofc-service_8py_file_ab5986a73f27475fd45ad29ad87d7fc0a}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Smb\+Net\+Fs\+Close@{Smb\+Net\+Fs\+Close}}
+\index{Smb\+Net\+Fs\+Close@{Smb\+Net\+Fs\+Close}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Smb\+Net\+Fs\+Close()}{SmbNetFsClose()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Smb\+Net\+Fs\+Close (\begin{DoxyParamCaption}\item[{}]{Smb\+Directory }\end{DoxyParamCaption})}
+
+
+
+Функция закрытия Samba-\/подключения 
+
+С помощью команды fusermount выполняется размонтирование папки Samba-\/пользователя 
+\begin{DoxyCode}
+237 \textcolor{keyword}{def }SmbNetFsClose(SmbDirectory):
+238     \textcolor{keywordflow}{return} getstatusoutput([\textcolor{stringliteral}{"/bin/fusermount"}, \textcolor{stringliteral}{"-u"},
+239                             SmbDirectory], \textcolor{keyword}{False})[0] == 0
+240 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a93c21c62e6b4cc45c8128d485d9709fb}\label{isofc-service_8py_file_a93c21c62e6b4cc45c8128d485d9709fb}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Smb\+Net\+Fs\+Init@{Smb\+Net\+Fs\+Init}}
+\index{Smb\+Net\+Fs\+Init@{Smb\+Net\+Fs\+Init}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Smb\+Net\+Fs\+Init()}{SmbNetFsInit()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Smb\+Net\+Fs\+Init (\begin{DoxyParamCaption}\item[{}]{Smb\+Directory }\end{DoxyParamCaption})}
+
+
+
+Функция инициализации Samba-\/подключения 
+
+С помощью команды smbnetfs выполняется монтирование в определнную папки
+
+При возникновение ошибки соединения закрывается  Smb\+Directory -\/ папка для монтирования Samba-\/клиента 
+\begin{DoxyCode}
+220 \textcolor{keyword}{def }SmbNetFsInit(SmbDirectory):
+221     \textcolor{keywordflow}{try}:
+222         os.makedirs(SmbDirectory, exist\_ok=\textcolor{keyword}{True})
+223     \textcolor{keywordflow}{except} OSError \textcolor{keyword}{as} e:
+224         \textcolor{keywordflow}{if} e.errno == 17:
+225             SmbNetFsClose(SmbDirectory)
+226         \textcolor{keywordflow}{else}:
+227             \textcolor{keywordflow}{raise}
+228     retcode, output = getstatusoutput([\textcolor{stringliteral}{"/usr/bin/smbnetfs"},
+229                                        SmbDirectory], \textcolor{keyword}{False})
+230     Log(\textcolor{stringliteral}{"Smbnetfs init: "} + \textcolor{stringliteral}{"retcode: "} + str(retcode) + \textcolor{stringliteral}{", "}
+231         + \textcolor{stringliteral}{"output: "} + output)
+232     \textcolor{keywordflow}{return} output == \textcolor{stringliteral}{""}
+233 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ade5fb73a2623e6354a2453b612e1943b}\label{isofc-service_8py_file_ade5fb73a2623e6354a2453b612e1943b}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Status@{Status}}
+\index{Status@{Status}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Status()}{Status()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Status (\begin{DoxyParamCaption}\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция получения статуса устройства 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+351 \textcolor{keyword}{def }Status(device):
+352     \textcolor{keywordflow}{for} PortNum \textcolor{keywordflow}{in} range(1, 8): \textcolor{comment}{# \(\backslash\)todo поменять на 2}
+353         \_Port = \textcolor{stringliteral}{"Port"} + str(PortNum) + \textcolor{stringliteral}{"Status"}
+354         exec(\textcolor{stringliteral}{'global '} + \_Port)
+355     \textcolor{keywordflow}{return} re.sub(\textcolor{stringliteral}{'<[^>]*>'}, \textcolor{stringliteral}{''},
+356                  eval(\textcolor{stringliteral}{'Port'} + str(Port(device)) + \textcolor{stringliteral}{'Status'}))
+357 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ac3a9b4525481c6bc4b39f8c382294cf3}\label{isofc-service_8py_file_ac3a9b4525481c6bc4b39f8c382294cf3}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Transfer@{Transfer}}
+\index{Transfer@{Transfer}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Transfer()}{Transfer()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Transfer (\begin{DoxyParamCaption}\item[{}]{device,  }\item[{}]{Usb\+Directory,  }\item[{}]{Credentials }\end{DoxyParamCaption})}
+
+
+
+Функция обмена данными между флешкой и сетевым диском 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+{\em Usb\+Directory} & -\/ папка до флешки, Credentials -\/ данные авторизации \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+468 \textcolor{keyword}{def }Transfer(device, UsbDirectory, Credentials):
+469     Log(\textcolor{stringliteral}{"Start transfer"})
+470     \textcolor{keyword}{global} config
+471     Login, Password = Credentials[1], Credentials[2]
+472     UserDirectory = str(config.smbnetfs\_directory + \textcolor{stringliteral}{"/"} + Login
+473                         + \textcolor{stringliteral}{":"} + Password
+474                         + \textcolor{stringliteral}{"@"} + config.server\_ip + \textcolor{stringliteral}{"/"} + Login) \textcolor{comment}{# аутентификация на samba-сервере}
+475     smbIn, smbOut = get\_in\_out(UserDirectory) \textcolor{comment}{# листинг папок пользователя на сетевом диске}
+476     usbIn, usbOut = get\_in\_out(UsbDirectory) \textcolor{comment}{# листинг папок на флешке}
+477     \textcolor{keywordflow}{if} Status(device) != StatusMsg[\textcolor{stringliteral}{'Free'}]:
+478         StatusSet(device, StatusMsg[\textcolor{stringliteral}{'Copying'}],
+479                   StatusClrs[\textcolor{stringliteral}{'Copying'}])
+480     \textcolor{keywordflow}{for} \_dir \textcolor{keywordflow}{in} [smbIn, smbOut, usbIn, usbOut]:
+481         \textcolor{keywordflow}{try}:
+482             os.makedirs(\_dir, exist\_ok=\textcolor{keyword}{True}) \textcolor{comment}{# создание папок}
+483         \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e:
+484             \textcolor{keywordflow}{if} e.errno != 17:
+485                 Log(str(e))
+486             \textcolor{keywordflow}{pass}
+487     \textcolor{keywordflow}{try}:
+488         \textcolor{keywordflow}{if} Login == config.admin:
+489             Log(\textcolor{stringliteral}{"Admin login: "} + Login)
+490             do\_admin\_work(usbIn) \textcolor{comment}{# выполнение "админской работы", в случае, если флешка пренадлежит
+       администратору}
+491     \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e:
+492         Log(\textcolor{stringliteral}{"Error while admin work: "} + str(e))
+493     retcodeU = 0 \textcolor{comment}{# флаг успешности копирования сетевой диск -> флешка}
+494     retcodeD = 0 \textcolor{comment}{# флаг успешности копирования флешка -> сетевой диск}
+495     Log(\textcolor{stringliteral}{"List of smb/Out:"})
+496     list\_files(smbOut)
+497     Log(\textcolor{stringliteral}{"List of usb/Out:"})
+498     list\_files(usbOut)
+499     \textcolor{keywordflow}{try}:
+500         \textcolor{keywordflow}{for} directory \textcolor{keywordflow}{in} [smbOut, smbIn, usbOut, usbIn]:
+501             \textcolor{keywordflow}{if} os.path.islink(directory):
+502                 Log(str(directory) + \textcolor{stringliteral}{" is symlink"})
+503                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+504         \textcolor{keywordflow}{for} \_dir \textcolor{keywordflow}{in} os.listdir(smbOut):
+505             \textcolor{keywordflow}{if} getstatusoutput([\textcolor{stringliteral}{"/bin/cp"}, \textcolor{stringliteral}{"-R"},
+506                                 smbOut + \_dir, usbIn + \_dir],
+507                                shell=\textcolor{keyword}{False})[0] == 0: \textcolor{comment}{# копирование с папки out на диске в папку in на
+       флешке}
+508                 retcodeU = getstatusoutput([\textcolor{stringliteral}{"/bin/rm"}, \textcolor{comment}{# удаление файлов из папки out на сетевом диске}
+509                                             smbOut + \_dir, \textcolor{stringliteral}{"-rf"}],
+510                                            shell=\textcolor{keyword}{False})[0]
+511             \textcolor{keywordflow}{else}:
+512                 retcodeU = 1
+513         \textcolor{keywordflow}{for} \_dir \textcolor{keywordflow}{in} os.listdir(usbOut):
+514             \textcolor{keywordflow}{if} getstatusoutput([\textcolor{stringliteral}{"/bin/cp"}, \textcolor{stringliteral}{"-R"},
+515                                 usbOut + \_dir, smbIn + \_dir],
+516                                shell=\textcolor{keyword}{False})[0] == 0:  \textcolor{comment}{# копирование с папки out на сетевом диске в папку in
+       на флешке}
+517                 retcodeD = getstatusoutput([\textcolor{stringliteral}{"/bin/rm"},
+518                                             usbOut + \_dir, \textcolor{stringliteral}{"-rf"}],
+519                                            shell=\textcolor{keyword}{False})[0]
+520             \textcolor{keywordflow}{else}:
+521                 retcodeD = 1
+522     \textcolor{keywordflow}{except}:
+523         Log(str(sys.exc\_info()[1]))
+524         \textcolor{keywordflow}{pass}
+525     \textcolor{keywordflow}{return} retcodeU + retcodeD == 0
+526 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a50b9ec7706ed7d16a1a8a40d544e86da}\label{isofc-service_8py_file_a50b9ec7706ed7d16a1a8a40d544e86da}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!update\+\_\+files@{update\+\_\+files}}
+\index{update\+\_\+files@{update\+\_\+files}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{update\+\_\+files()}{update\_files()}}
+{\footnotesize\ttfamily def isofc-\/service.\+update\+\_\+files (\begin{DoxyParamCaption}\item[{}]{usb\+\_\+dir,  }\item[{}]{files }\end{DoxyParamCaption})}
+
+
+
+Функция обновлени файлов на флешке 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em usb\+\_\+dir} & -\/ папка до флешки \\
+\hline
+{\em files} & -\/ массив названий файлов, которые нужно скопировать \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+397 \textcolor{keyword}{def }update\_files(usb\_dir, files):
+398     \textcolor{keyword}{global} ExitFlag
+399     flag = \textcolor{keyword}{False}
+400     usb\_dir = \textcolor{stringliteral}{"/"} + usb\_dir + \textcolor{stringliteral}{"/"}
+401     \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} files:
+402         getstatusoutput(\textcolor{stringliteral}{"rm "} + usb\_dir + f)
+403         \textcolor{keywordflow}{if} getstatusoutput(\textcolor{stringliteral}{"stat "} + usb\_dir + f + \textcolor{stringliteral}{".gpg"})[0] != 0:
+404             Log(\textcolor{stringliteral}{"file "} + f + \textcolor{stringliteral}{".gpg"} + \textcolor{stringliteral}{" not found"}) \textcolor{comment}{# не найден файл .gpg}
+405             \textcolor{keywordflow}{continue}
+406         \textcolor{keywordflow}{if} gpg\_decrypt(usb\_dir + f + \textcolor{stringliteral}{".gpg"}):
+407             Log(\textcolor{stringliteral}{"Start update "} + f) \textcolor{comment}{# обновление файлов gpg}
+408             getstatusoutput(\textcolor{stringliteral}{"cp "} + usb\_dir + f + \textcolor{stringliteral}{" "}
+409                             + dirname(abspath(\_\_file\_\_))
+410                             + \textcolor{stringliteral}{"/"} + f,
+411                             logging=\textcolor{keyword}{True})
+412             getstatusoutput(\textcolor{stringliteral}{"cp "} + dirname(abspath(\_\_file\_\_)) \textcolor{comment}{# BACKUP файдлв}
+413                             + \textcolor{stringliteral}{"/"} + f
+414                             + \textcolor{stringliteral}{" "} + dirname(abspath(\_\_file\_\_))
+415                             + \textcolor{stringliteral}{"/"} + f + \textcolor{stringliteral}{".BACKUP"},
+416                             logging=\textcolor{keyword}{True})
+417             getstatusoutput(\textcolor{stringliteral}{"chmod 755 "}
+418                             + dirname(abspath(\_\_file\_\_))
+419                             + \textcolor{stringliteral}{"/"} + f,
+420                             logging=\textcolor{keyword}{True})
+421             getstatusoutput(\textcolor{stringliteral}{"rm "} + usb\_dir + f,
+422                             logging=\textcolor{keyword}{True})
+423             getstatusoutput(\textcolor{stringliteral}{"mv "} + usb\_dir + f + \textcolor{stringliteral}{".gpg "}
+424                             + usb\_dir + f + \textcolor{stringliteral}{".gpg.OLD"},
+425                             logging=\textcolor{keyword}{True})
+426             flag = \textcolor{keyword}{True}
+427     \textcolor{keywordflow}{if} flag:
+428         Log(\textcolor{stringliteral}{"Finish update: exit (wait for free all ports)"})
+429         ExitFlag = \textcolor{keyword}{True}
+430 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_ad24525bcc431f0f8c030e24bed019a6f}\label{isofc-service_8py_file_ad24525bcc431f0f8c030e24bed019a6f}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Usb\+Mount@{Usb\+Mount}}
+\index{Usb\+Mount@{Usb\+Mount}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Usb\+Mount()}{UsbMount()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Usb\+Mount (\begin{DoxyParamCaption}\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция монтирования usb. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+543 \textcolor{keyword}{def }UsbMount(device):
+544     retval, output = getstatusoutput(\textcolor{stringliteral}{"pmount "} + device.device\_node)
+545     \textcolor{keywordflow}{return} [retval, re.sub(\textcolor{stringliteral}{r'dev'}, \textcolor{stringliteral}{'media'}, device.device\_node)]
+546 
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a8078bdb80f1dc3e035795dbceec779aa}\label{isofc-service_8py_file_a8078bdb80f1dc3e035795dbceec779aa}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Usb\+Umount@{Usb\+Umount}}
+\index{Usb\+Umount@{Usb\+Umount}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Usb\+Umount()}{UsbUmount()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Usb\+Umount (\begin{DoxyParamCaption}\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция размонтирования usb. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+549 \textcolor{keyword}{def }UsbUmount(device):
+550     retval, output = getstatusoutput(\textcolor{stringliteral}{"pumount "} + device.device\_node)
+551     \textcolor{keywordflow}{if} Status(device) != StatusMsg[\textcolor{stringliteral}{'Free'}]:
+552         \textcolor{keywordflow}{if} Status(device).find(StatusMsg[\textcolor{stringliteral}{'Error'}]) >= 0:
+553             StatusSet(device,
+554                       Status(device)
+555                       + StatusMsg[\textcolor{stringliteral}{'DisconnectAddition'}],
+556                       StatusClrs[\textcolor{stringliteral}{'Error'}])
+557         \textcolor{keywordflow}{else}:
+558             StatusSet(device, StatusMsg[\textcolor{stringliteral}{'DisconnectPlease'}],
+559                       StatusClrs[\textcolor{stringliteral}{'DisconnectPlease'}])
+560     \textcolor{keywordflow}{return} retval
+561 
+562 
+\end{DoxyCode}
+
+
+\subsection{Переменные}
+\mbox{\Hypertarget{isofc-service_8py_file_a32430ce5e336e5cb8ec2df27f66b86dd}\label{isofc-service_8py_file_a32430ce5e336e5cb8ec2df27f66b86dd}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Status\+Clrs@{Status\+Clrs}}
+\index{Status\+Clrs@{Status\+Clrs}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Status\+Clrs}{StatusClrs}}
+{\footnotesize\ttfamily dictionary isofc-\/service.\+Status\+Clrs}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}
+1 =  \{
+2     \textcolor{stringliteral}{'Normal'}: \textcolor{stringliteral}{'white'},
+3     \textcolor{stringliteral}{'Error'}: \textcolor{stringliteral}{'red'},
+4     \textcolor{stringliteral}{'Copying'}: \textcolor{stringliteral}{'yellow'},
+5     \textcolor{stringliteral}{'DisconnectPlease'}: \textcolor{stringliteral}{'green'},
+6 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{isofc-service_8py_file_a86c2854b086f3034ce6820a9db41f34b}\label{isofc-service_8py_file_a86c2854b086f3034ce6820a9db41f34b}} 
+\index{isofc-\/service.\+py@{isofc-\/service.\+py}!Status\+Msg@{Status\+Msg}}
+\index{Status\+Msg@{Status\+Msg}!isofc-\/service.\+py@{isofc-\/service.\+py}}
+\subsubsection{\texorpdfstring{Status\+Msg}{StatusMsg}}
+{\footnotesize\ttfamily dictionary isofc-\/service.\+Status\+Msg}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}
+1 =  \{
+2     \textcolor{stringliteral}{'Free'}: \textcolor{stringliteral}{'Free'},
+3     \textcolor{stringliteral}{'Connected'}: \textcolor{stringliteral}{'Connected'},
+4     \textcolor{stringliteral}{'Copying'}: \textcolor{stringliteral}{'Copying'},
+5     \textcolor{comment}{# Warn: all *Error must contain 'Error' value (for ex.: 'Ошибка')}
+6     \textcolor{stringliteral}{'Error'}: \textcolor{stringliteral}{'Error'},
+7     \textcolor{stringliteral}{'MountError'}: \textcolor{stringliteral}{'Mount error'},
+8     \textcolor{stringliteral}{'CopyError'}: \textcolor{stringliteral}{'Copy error'},
+9     \textcolor{stringliteral}{'UmountError'}: \textcolor{stringliteral}{'Umount error'},
+10     \textcolor{stringliteral}{'Connecting'}: \textcolor{stringliteral}{'Connecting'},
+11     \textcolor{stringliteral}{'ConnectingError'}: \textcolor{stringliteral}{'Connecting error'},
+12     \textcolor{stringliteral}{'AuthFileNotFoundError'}: \textcolor{stringliteral}{'No aut file'},
+13     \textcolor{stringliteral}{'AuthSmbError'}: \textcolor{stringliteral}{'Check log or path'},
+14     \textcolor{stringliteral}{'MoreOneLogin'}: \textcolor{stringliteral}{'Login in use'},
+15     \textcolor{stringliteral}{'WrongAuthFileError'}: \textcolor{stringliteral}{'Wrong aut file'},
+16     \textcolor{stringliteral}{'TransferError'}: \textcolor{stringliteral}{'Transfer error'},
+17     \textcolor{stringliteral}{'DisconnectPlease'}: \textcolor{stringliteral}{'Done'},
+18     \textcolor{stringliteral}{'DisconnectAddition'}: \textcolor{stringliteral}{', extract'},
+19 \}
+\end{DoxyCode}
+
+
+Сообщения для вывода на дисплей 
+

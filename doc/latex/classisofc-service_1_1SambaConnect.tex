@@ -1,0 +1,234 @@
+\hypertarget{classisofc-service_1_1SambaConnect}{}\section{Класс isofc-\/service.Samba\+Connect}
+\label{classisofc-service_1_1SambaConnect}\index{isofc-\/service.\+Samba\+Connect@{isofc-\/service.\+Samba\+Connect}}
+
+
+Класс, выполняющий работу с Samba сервером и синхронизацию файлов  
+
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a1f6c9a61dea2855ea0b683beeade8982}\label{classisofc-service_1_1SambaConnect_a1f6c9a61dea2855ea0b683beeade8982}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, Login, Password, device, usbdirectory)
+\item 
+def \mbox{\hyperlink{classisofc-service_1_1SambaConnect_a256854c09eac2ddc8f3d50d616a0a143}{Make\+Dir}} (self, Dir\+Path)
+\begin{DoxyCompactList}\small\item\em Функцbя создания папки пользователя \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service_1_1SambaConnect_a95a21d63db6f88fd43eb6a8958bb174d}{Smb\+Mount}} (self)
+\begin{DoxyCompactList}\small\item\em Функция монтирования каталога Samba. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service_1_1SambaConnect_a3979f8cc410218f1a71d44f340d1cdf8}{Smb\+Umount}} (self)
+\begin{DoxyCompactList}\small\item\em Функция размонтирования каталога Samba. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service_1_1SambaConnect_adb0efabb0957a5edadce147d74e275b0}{Copy}} (self, Os\+Walk\+Obj, Dest\+Dir)
+\begin{DoxyCompactList}\small\item\em Функция копирования файлов согласно списку \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service_1_1SambaConnect_a8dba7ba6f3526fcab4703dba0f5bdcd5}{File\+Copy}} (self, Start\+Path, Dest\+Path)
+\begin{DoxyCompactList}\small\item\em Функция копирования файла \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service_1_1SambaConnect_aeaa767a173ce5e1f7d92770d53b7878d}{Transfer}} (self)
+\begin{DoxyCompactList}\small\item\em Функция обмена данными между флешкой и сетевым диском \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a767da85da916ca28133a064ffec5226a}\label{classisofc-service_1_1SambaConnect_a767da85da916ca28133a064ffec5226a}} 
+{\bfseries Usb\+Directory}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a9dbdd0637919c53f4e418a60947bf0a8}\label{classisofc-service_1_1SambaConnect_a9dbdd0637919c53f4e418a60947bf0a8}} 
+{\bfseries User\+Directory}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_ace6db57e15b3072564e64158acdae12d}\label{classisofc-service_1_1SambaConnect_ace6db57e15b3072564e64158acdae12d}} 
+{\bfseries Usb\+File\+ListW}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a63c3cf060d4a486fc6b519e672d5b06e}\label{classisofc-service_1_1SambaConnect_a63c3cf060d4a486fc6b519e672d5b06e}} 
+{\bfseries Usb\+File\+List}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_af494c5da04a261fa643e045bc1574c62}\label{classisofc-service_1_1SambaConnect_af494c5da04a261fa643e045bc1574c62}} 
+{\bfseries Smb\+File\+ListW}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a1f623e59b471b27d3f9146cfcb3b83c0}\label{classisofc-service_1_1SambaConnect_a1f623e59b471b27d3f9146cfcb3b83c0}} 
+{\bfseries Smb\+File\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс, выполняющий работу с Samba сервером и синхронизацию файлов 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_adb0efabb0957a5edadce147d74e275b0}\label{classisofc-service_1_1SambaConnect_adb0efabb0957a5edadce147d74e275b0}} 
+\index{isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}!Copy@{Copy}}
+\index{Copy@{Copy}!isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Samba\+Connect.\+Copy (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{Os\+Walk\+Obj,  }\item[{}]{Dest\+Dir }\end{DoxyParamCaption})}
+
+
+
+Функция копирования файлов согласно списку 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Os\+Walk\+Obj} & -\/ список файлов и папок, сгенерированный os.\+walk() \\
+\hline
+{\em Dest\+Dir} & -\/ папка назначения\\
+\hline
+{\em self} & -\/ Возвратный указатель \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+322     \textcolor{keyword}{def }Copy(self,OsWalkObj, DestDir):
+323         \textcolor{keywordflow}{for} level \textcolor{keywordflow}{in} OsWalkObj:
+324             \textcolor{keywordflow}{for} directory \textcolor{keywordflow}{in} level[1]:
+325                 \textcolor{keywordflow}{if} self.MakeDir(DestDir+\textcolor{stringliteral}{"/"}+level[0]+\textcolor{stringliteral}{"/"}+directory) == 0:
+326                     \textcolor{keywordflow}{pass}
+327                 \textcolor{keywordflow}{else}:
+328                     Log(\textcolor{stringliteral}{"Can`t create directory "}+DestDir+\textcolor{stringliteral}{"/"}+level[0]+\textcolor{stringliteral}{"/"}+directory)
+329 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a8dba7ba6f3526fcab4703dba0f5bdcd5}\label{classisofc-service_1_1SambaConnect_a8dba7ba6f3526fcab4703dba0f5bdcd5}} 
+\index{isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}!File\+Copy@{File\+Copy}}
+\index{File\+Copy@{File\+Copy}!isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}}
+\subsubsection{\texorpdfstring{File\+Copy()}{FileCopy()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Samba\+Connect.\+File\+Copy (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{Start\+Path,  }\item[{}]{Dest\+Path }\end{DoxyParamCaption})}
+
+
+
+Функция копирования файла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Start\+Path} & -\/ путь к файлу, который копируется \\
+\hline
+{\em Dest\+Path} & -\/ путь, куда будет скопирован файл\\
+\hline
+{\em self} & -\/ Возвратный указатель \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+337     \textcolor{keyword}{def }FileCopy(self,StartPath,DestPath):
+338         command = [\textcolor{stringliteral}{"/bin/cp "}, StartPath, \textcolor{stringliteral}{" "}, DestPath]
+339         \textcolor{keywordflow}{return} getstatusoutput(\textcolor{stringliteral}{''}.join(command), \textcolor{keyword}{True}, timeout=20)[0]
+340 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a256854c09eac2ddc8f3d50d616a0a143}\label{classisofc-service_1_1SambaConnect_a256854c09eac2ddc8f3d50d616a0a143}} 
+\index{isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}!Make\+Dir@{Make\+Dir}}
+\index{Make\+Dir@{Make\+Dir}!isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}}
+\subsubsection{\texorpdfstring{Make\+Dir()}{MakeDir()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Samba\+Connect.\+Make\+Dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{Dir\+Path }\end{DoxyParamCaption})}
+
+
+
+Функцbя создания папки пользователя 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em self} & -\/ Возвратный указатель \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+293     \textcolor{keyword}{def }MakeDir(self,DirPath):
+294         \textcolor{keywordflow}{return} getstatusoutput(\textcolor{stringliteral}{"/bin/mkdir "} + str(DirPath), \textcolor{keyword}{True}, timeout = 2)[0]
+295 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a95a21d63db6f88fd43eb6a8958bb174d}\label{classisofc-service_1_1SambaConnect_a95a21d63db6f88fd43eb6a8958bb174d}} 
+\index{isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}!Smb\+Mount@{Smb\+Mount}}
+\index{Smb\+Mount@{Smb\+Mount}!isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}}
+\subsubsection{\texorpdfstring{Smb\+Mount()}{SmbMount()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Samba\+Connect.\+Smb\+Mount (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Функция монтирования каталога Samba. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em self} & -\/ Возвратный указатель \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+300     \textcolor{keyword}{def }SmbMount(self):
+301         command = [\textcolor{stringliteral}{"/sbin/sudo /sbin/mount.cifs "}, \textcolor{stringliteral}{"//127.0.0.1/"}, self.Login, \textcolor{stringliteral}{" "}, self.UserDirectory,
+302                 \textcolor{stringliteral}{" -o user="}, self.Login, \textcolor{stringliteral}{",password="}, self.Password,\textcolor{stringliteral}{",workgroup="},config[\textcolor{stringliteral}{'workgroup'}],
+303                 \textcolor{stringliteral}{",rw,gid="}, config[\textcolor{stringliteral}{'smb\_gid'}], \textcolor{stringliteral}{",uid="}, config[\textcolor{stringliteral}{'smb\_uid'}]]
+304 
+305         \textcolor{keywordflow}{return} getstatusoutput(\textcolor{stringliteral}{''}.join(command), \textcolor{keyword}{True}, timeout=20)[0]
+306 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_a3979f8cc410218f1a71d44f340d1cdf8}\label{classisofc-service_1_1SambaConnect_a3979f8cc410218f1a71d44f340d1cdf8}} 
+\index{isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}!Smb\+Umount@{Smb\+Umount}}
+\index{Smb\+Umount@{Smb\+Umount}!isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}}
+\subsubsection{\texorpdfstring{Smb\+Umount()}{SmbUmount()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Samba\+Connect.\+Smb\+Umount (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Функция размонтирования каталога Samba. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em self} & -\/ Возвратный указатель \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+311     \textcolor{keyword}{def }SmbUmount(self):
+312         command = [\textcolor{stringliteral}{"/sbin/sudo /bin/umount "}, self.UserDirectory]
+313         \textcolor{keywordflow}{return} getstatusoutput(\textcolor{stringliteral}{''}.join(command), \textcolor{keyword}{True}, timeout=20)[0]
+314 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service_1_1SambaConnect_aeaa767a173ce5e1f7d92770d53b7878d}\label{classisofc-service_1_1SambaConnect_aeaa767a173ce5e1f7d92770d53b7878d}} 
+\index{isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}!Transfer@{Transfer}}
+\index{Transfer@{Transfer}!isofc-\/service\+::\+Samba\+Connect@{isofc-\/service\+::\+Samba\+Connect}}
+\subsubsection{\texorpdfstring{Transfer()}{Transfer()}}
+{\footnotesize\ttfamily def isofc-\/service.\+Samba\+Connect.\+Transfer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Функция обмена данными между флешкой и сетевым диском 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em self} & -\/ Возвратный указатель \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+345     \textcolor{keyword}{def }Transfer(self):
+346         Log(\textcolor{stringliteral}{"Start transering..."})
+347         self.UsbFileListW = os.walk(self.UsbDirectory + \textcolor{stringliteral}{"/out"})
+348         self.UsbFileList = []
+349         \textcolor{keywordflow}{for} level \textcolor{keywordflow}{in} self.UsbFileListW:
+350             level = list(level)
+351             level[0] = level[0].replace(self.UsbDirectory + \textcolor{stringliteral}{"/out"},\textcolor{stringliteral}{"."})
+352             self.UsbFileList.append(level)
+353 
+354         self.SmbFileListW = os.walk(self.UserDirectory + \textcolor{stringliteral}{"/out"})
+355         self.SmbFileList = []
+356         \textcolor{keywordflow}{for} level \textcolor{keywordflow}{in} self.SmbFileListW:
+357             level = list(level)
+358             level[0] = level[0].replace(self.UserDirectory + \textcolor{stringliteral}{"/out"},\textcolor{stringliteral}{"."})
+359             self.SmbFileList.append(level)
+360 
+361         Log(\textcolor{stringliteral}{"List of out directory in USB: \(\backslash\)n"} )
+362         \textcolor{keywordflow}{for} level \textcolor{keywordflow}{in} self.UsbFileList:
+363             \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} level[2]:
+364                 Log(level[0] + \textcolor{stringliteral}{"/"} + filename,\textcolor{keyword}{False})
+365         Log(\textcolor{stringliteral}{""},\textcolor{keyword}{False})
+366 
+367         self.Copy(self.UsbFileList,self.UserDirectory + \textcolor{stringliteral}{"/in"})
+368         Log(\textcolor{stringliteral}{""},\textcolor{keyword}{False})
+369 
+370         Log(\textcolor{stringliteral}{"List of out directory in SMB: \(\backslash\)n"} )
+371         \textcolor{keywordflow}{for} level \textcolor{keywordflow}{in} self.SmbFileList:
+372             \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} level[2]:
+373                 Log(level[0] + \textcolor{stringliteral}{"/"} + filename,\textcolor{keyword}{False})
+374         Log(\textcolor{stringliteral}{""},\textcolor{keyword}{False})
+375 
+376 \textcolor{comment}{#        self.Copy(self.SmbFileList,self.UsbDirectory + "/in")}
+377 \textcolor{comment}{#        Log("",False)}
+378 
+379 
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+isofc-\/service.\+py\end{DoxyCompactItemize}

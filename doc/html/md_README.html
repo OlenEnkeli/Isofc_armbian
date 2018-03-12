@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Isofc for ArmBian: ISOFC for ArmBian</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="isofc-ico.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Isofc for ArmBian
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ISOFC for ArmBian </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>ISOFC for ArmBian: система копирования с использованием сервера Samba 4</p>
+<p>Предназначена для использования в образовательных учреждениях и предприятиях, где использвуется защита от прямого использования USB-накопителей</p>
+<p>Позволяет производить авторизацию флешки с помощью хэш-кода, содержашего логин и пароль пользователя</p>
+<p>Данный файл представляет собой сервис, который должен быть постоянно запущен на компьютере с доступом к SAMBA серверу</p>
+<p>Author: Klementyev Mikhail <a href="#" onclick="location.href='mai'+'lto:'+'jol'+'lh'+'eef'+'@r'+'ise'+'up'+'.ne'+'t'; return false;">jollh<span style="display: none;">.nosp@m.</span>eef@<span style="display: none;">.nosp@m.</span>riseu<span style="display: none;">.nosp@m.</span>p.ne<span style="display: none;">.nosp@m.</span>t</a></p>
+<p>Porting for armbian: Nicolskiy Anton <a href="#" onclick="location.href='mai'+'lto:'+'ang'+'el'+'off'+'re'+'e@y'+'an'+'dex'+'.r'+'u'; return false;">angel<span style="display: none;">.nosp@m.</span>offr<span style="display: none;">.nosp@m.</span>ee@ya<span style="display: none;">.nosp@m.</span>ndex<span style="display: none;">.nosp@m.</span>.ru</a>, Lutkovsky Dmitry &lt;&gt;, Voroshillo Dmitry &lt;&gt;</p>
+<h3>Deb-based(Debian, Ubuntu etc.)</h3>
+<pre class="fragment">$ sudo apt-get install git libmono-i18n2.0-cil ironpython
+$ git clone https://github.com/jollheef/isofc/
+$ ipy ./isofc/isofc-client.ipy
+</pre><h3>Windows</h3>
+<p>Скачиваем и устанавливаем <a href="http://ironpython.net/download/">ironpython</a></p>
+<p>Нажимаем Win + R (Пуск -&gt; Выполнить), выполняем </p><pre class="fragment">C:\Program Files (x86)\IronPython 2.7\ipy.exe \путь\к\isofc-client.ipy
+</pre><h4>Компиляция под Windows как автономное приложение</h4>
+<p>Как прикрутить иконку читать <a href="http://stackoverflow.com/questions/4743578/how-can-i-add-a-custome-icon-to-executables-created-with-ironpython-pyc-py">тут</a> </p><pre class="fragment">ipy.exe Tools\Scripts\pyc.py /main:C:\путь\к\isofc-client.ipy /standalone /embed /target:winexe</pre> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

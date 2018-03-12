@@ -1,0 +1,88 @@
+\hypertarget{classisofc-service_1_1MainThread}{}\section{Класс isofc-\/service.Main\+Thread}
+\label{classisofc-service_1_1MainThread}\index{isofc-\/service.\+Main\+Thread@{isofc-\/service.\+Main\+Thread}}
+
+
+Тред окна, заменить на собственный директор  
+
+
+Граф наследования\+:isofc-\/service.Main\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classisofc-service_1_1MainThread}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a7e84bb80f26b602f53f06a4be88adfd9}\label{classisofc-service_1_1MainThread_a7e84bb80f26b602f53f06a4be88adfd9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, \+\_\+win)
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a800f6970dd13e9d2d75127b48853ef49}\label{classisofc-service_1_1MainThread_a800f6970dd13e9d2d75127b48853ef49}} 
+def {\bfseries run} (self)
+\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_acc8a8558957d8cac800ba133e0b7a6af}\label{classisofc-service_1_1MainThread_acc8a8558957d8cac800ba133e0b7a6af}} 
+{\bfseries quit}
+\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_adc6bf80a4326a49405f87bb0b25a2c73}\label{classisofc-service_1_1MainThread_adc6bf80a4326a49405f87bb0b25a2c73}} 
+{\bfseries context} = pyudev.\+Context()
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a6396e6b91b66ca3179d054665dfa5199}\label{classisofc-service_1_1MainThread_a6396e6b91b66ca3179d054665dfa5199}} 
+{\bfseries monitor} = pyudev.\+Monitor.\+from\+\_\+netlink(context)
+\item 
+{\bfseries observer}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_addc972a940dbd899a7287bef711ce6a8}\label{classisofc-service_1_1MainThread_addc972a940dbd899a7287bef711ce6a8}} 
+{\bfseries config} = S\+Conf\+Parser(dirname(abspath(\+\_\+\+\_\+file\+\_\+\+\_\+)) + \char`\"{}/isofc-\/service.\+conf\char`\"{})
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a8bcf580d3a0364f84353d845941a4676}\label{classisofc-service_1_1MainThread_a8bcf580d3a0364f84353d845941a4676}} 
+bool {\bfseries Exit\+Flag} = False
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_aa82503fa0f030ffdb188046a25f7612a}\label{classisofc-service_1_1MainThread_aa82503fa0f030ffdb188046a25f7612a}} 
+bool {\bfseries Restart\+Flag} = False
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_afc3388b2c4d1a5a6241e2d462bd2287d}\label{classisofc-service_1_1MainThread_afc3388b2c4d1a5a6241e2d462bd2287d}} 
+{\bfseries Clients\+Lock} = Lock()
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_ac4b2fea6b1f99662afe689cad20a1956}\label{classisofc-service_1_1MainThread_ac4b2fea6b1f99662afe689cad20a1956}} 
+list {\bfseries Clients} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a0da9eba6106ca5e8a320f9b6574e4df3}\label{classisofc-service_1_1MainThread_a0da9eba6106ca5e8a320f9b6574e4df3}} 
+list {\bfseries Ports} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a5a24f34cb7ef8d92a0cd5b1a9332a285}\label{classisofc-service_1_1MainThread_a5a24f34cb7ef8d92a0cd5b1a9332a285}} 
+{\bfseries win} = \mbox{\hyperlink{classisofc-service_1_1MainWindow}{Main\+Window}}()
+\item 
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_a441ed4d7c818de2576c6fbc6aa3b71d4}\label{classisofc-service_1_1MainThread_a441ed4d7c818de2576c6fbc6aa3b71d4}} 
+{\bfseries thread} = \mbox{\hyperlink{classisofc-service_1_1MainThread}{Main\+Thread}}(win)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Тред окна, заменить на собственный директор 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classisofc-service_1_1MainThread_ac4a943d756a48fde83d85217a87e170f}\label{classisofc-service_1_1MainThread_ac4a943d756a48fde83d85217a87e170f}} 
+\index{isofc-\/service\+::\+Main\+Thread@{isofc-\/service\+::\+Main\+Thread}!observer@{observer}}
+\index{observer@{observer}!isofc-\/service\+::\+Main\+Thread@{isofc-\/service\+::\+Main\+Thread}}
+\subsubsection{\texorpdfstring{observer}{observer}}
+{\footnotesize\ttfamily isofc-\/service.\+Main\+Thread.\+observer\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}
+=  pyudev.MonitorObserver(
+        monitor,
+        \textcolor{keyword}{lambda} action, device: Thread(
+            target=DeviceHandlerExceptionWrapper,
+            args=[action, device]).start())
+\end{DoxyCode}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{isofc-service_8py}{isofc-\/service.\+py}}\end{DoxyCompactItemize}

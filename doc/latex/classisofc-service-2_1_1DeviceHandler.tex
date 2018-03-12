@@ -1,0 +1,300 @@
+\hypertarget{classisofc-service-2_1_1DeviceHandler}{}\section{Класс isofc-\/service-\/2.Device\+Handler}
+\label{classisofc-service-2_1_1DeviceHandler}\index{isofc-\/service-\/2.\+Device\+Handler@{isofc-\/service-\/2.\+Device\+Handler}}
+
+
+Класс обработки U\+S\+B-\/устройств  
+
+
+Граф наследования\+:isofc-\/service-\/2.Device\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classisofc-service-2_1_1DeviceHandler}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a061cfb786c74e313a8cfb4e56c6f7185}\label{classisofc-service-2_1_1DeviceHandler_a061cfb786c74e313a8cfb4e56c6f7185}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a60fb1b67d21c9f460665a7afd0cf0f18}\label{classisofc-service-2_1_1DeviceHandler_a60fb1b67d21c9f460665a7afd0cf0f18}} 
+def {\bfseries run} (self)
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a6b69b0878532d25a12384f836181cd40}\label{classisofc-service-2_1_1DeviceHandler_a6b69b0878532d25a12384f836181cd40}} 
+def \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_a6b69b0878532d25a12384f836181cd40}{Run\+Monitor}} (self)
+\begin{DoxyCompactList}\small\item\em Функция, запускающая обработка мониторинга подключения U\+SB устройств к системе \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_ada5463d9cb3227033f0f264baa7ff853}\label{classisofc-service-2_1_1DeviceHandler_ada5463d9cb3227033f0f264baa7ff853}} 
+def {\bfseries Run\+Thread} (self, action, device)
+\item 
+def \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_ac8c924e28f64f20f5a80c71aeca434b3}{Check\+Auth}} (self, device, usbdirectory)
+\begin{DoxyCompactList}\small\item\em Функция проверки аутефикации на Samba-\/сервере \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_a0c5e62236097f3afa184be6bfbc61495}{Decrypt}} (self, ciphertext)
+\begin{DoxyCompactList}\small\item\em Функция расшифровки файла с данными авторизации \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_a54a0e6f35c2bf9619c532a5940706655}{Usb\+Mount}} (self, device)
+\begin{DoxyCompactList}\small\item\em Функция монтирования usb. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_a72e367f0aca59a59e9374c8bda9b8806}{Usb\+Umount}} (self, device)
+\begin{DoxyCompactList}\small\item\em Функция размонтирования usb. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_ab2f222dfae5bd17058e6257f7ff71d87}{Handle}} (self, action, device)
+\begin{DoxyCompactList}\small\item\em Функция обработки состояний U\+SB устройства \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a792efe5fc64a91a00119303cbe3387c1}\label{classisofc-service-2_1_1DeviceHandler_a792efe5fc64a91a00119303cbe3387c1}} 
+{\bfseries quit}
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a6194b1773ff05625d2a40bd17cca5cc6}\label{classisofc-service-2_1_1DeviceHandler_a6194b1773ff05625d2a40bd17cca5cc6}} 
+{\bfseries Exit\+Flag}
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_ad98be784f80d6ba47fa457a7ad43513c}\label{classisofc-service-2_1_1DeviceHandler_ad98be784f80d6ba47fa457a7ad43513c}} 
+{\bfseries observer}
+\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_afbb62a76f9959fc47a13559eb1e363cf}\label{classisofc-service-2_1_1DeviceHandler_afbb62a76f9959fc47a13559eb1e363cf}} 
+bool {\bfseries Exit\+Flag} = False
+\item 
+dictionary \mbox{\hyperlink{classisofc-service-2_1_1DeviceHandler_a95f5cb075a653330abd901ce95f715a8}{Status\+Msg}}
+\begin{DoxyCompactList}\small\item\em Сообщения для вывода на дисплей \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс обработки U\+S\+B-\/устройств 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_ac8c924e28f64f20f5a80c71aeca434b3}\label{classisofc-service-2_1_1DeviceHandler_ac8c924e28f64f20f5a80c71aeca434b3}} 
+\index{isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}!Check\+Auth@{Check\+Auth}}
+\index{Check\+Auth@{Check\+Auth}!isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}}
+\subsubsection{\texorpdfstring{Check\+Auth()}{CheckAuth()}}
+{\footnotesize\ttfamily def isofc-\/service-\/2.Device\+Handler.\+Check\+Auth (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{device,  }\item[{}]{usbdirectory }\end{DoxyParamCaption})}
+
+
+
+Функция проверки аутефикации на Samba-\/сервере 
+
+Идет проверка на существование файла ./isofc\+\_\+credentials
+
+Файл расшифровывается, сверяется serial id устройства в usb порте и serial id из файла аутефикации
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ciphertext} & -\/ входная строка (зашифрованный текст) \\
+\hline
+{\em private\+\_\+key\+\_\+path} & -\/ путь к файлу секретного ключа \\
+\hline
+{\em opentext} & -\/ расшифрованный текст \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+133     \textcolor{keyword}{def }CheckAuth(self, device, usbdirectory):
+134         \textcolor{keywordflow}{try}:
+135             f = open(usbdirectory + \textcolor{stringliteral}{"/.isofc\_credentials"}, \textcolor{stringliteral}{"r")}
+136 \textcolor{stringliteral}{            data = f.read().replace('\(\backslash\)n'}, \textcolor{stringliteral}{''})
+137         \textcolor{keywordflow}{except} IOError \textcolor{keyword}{as} exc:
+138             \textcolor{keywordflow}{if} exc.errno == 2:
+139                 \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, self.StatusMsg[\textcolor{stringliteral}{'AuthFileNotFoundError'}]] \textcolor{comment}{# Нет файла аутенфикации}
+140             \textcolor{keywordflow}{else}:
+141                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+142         Credentials = self.Decrypt(data) \textcolor{comment}{# функция расшифровки файла аутенфикации}
+143 
+144         \textcolor{keywordflow}{if} Credentials == \textcolor{stringliteral}{'Error'}:
+145             \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, self.StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]]
+146         \textcolor{keywordflow}{try}:
+147             Credentials = json.loads(Credentials)
+148             serial = device[\textcolor{stringliteral}{'ID\_SERIAL'}]
+149         \textcolor{keywordflow}{except}:
+150             \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, self.StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]]
+151         \textcolor{keywordflow}{if} serial.lower() != Credentials[\textcolor{stringliteral}{'Serial'}].lower():
+152             Log(\textcolor{stringliteral}{"Serial ID in credentials ("} + Credentials[\textcolor{stringliteral}{'Serial'}].lower()
+153                 + \textcolor{stringliteral}{") is not equal serial ID in usb device ("}
+154                 +  serial.lower() + \textcolor{stringliteral}{")"})
+155             \textcolor{keywordflow}{return} [\textcolor{keyword}{False}, self.StatusMsg[\textcolor{stringliteral}{'WrongAuthFileError'}]]
+156 
+157         f.close()
+158 
+159         \textcolor{keywordflow}{return} [\textcolor{keyword}{True}, Credentials[\textcolor{stringliteral}{'Login'}], Credentials[\textcolor{stringliteral}{'Password'}], serial]
+160 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a0c5e62236097f3afa184be6bfbc61495}\label{classisofc-service-2_1_1DeviceHandler_a0c5e62236097f3afa184be6bfbc61495}} 
+\index{isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}}
+\subsubsection{\texorpdfstring{Decrypt()}{Decrypt()}}
+{\footnotesize\ttfamily def isofc-\/service-\/2.Device\+Handler.\+Decrypt (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ciphertext }\end{DoxyParamCaption})}
+
+
+
+Функция расшифровки файла с данными авторизации 
+
+Идет проверка на существование файла секретного ключа.
+
+Файл расшифровывается последовательно base64 -\/$>$ rsa с помошью секретного ключа 
+\begin{DoxyParams}{Аргументы}
+{\em ciphertext} & -\/ входная строка (зашифрованный текст) \\
+\hline
+{\em private\+\_\+key\+\_\+path} & -\/ путь к файлу секретного ключа \\
+\hline
+{\em opentext} & -\/ расшифрованный текст \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+169     \textcolor{keyword}{def }Decrypt(self, ciphertext):
+170         \textcolor{keyword}{global} config
+171         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isfile(config[\textcolor{stringliteral}{"private\_key\_path"}]):
+172             Log(\textcolor{stringliteral}{"Private key not found"})
+173             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Error'}
+174         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} base64p(ciphertext):
+175             Log(\textcolor{stringliteral}{".isofc\_credentials is not base64, Ciphertext = '"}
+176                 + str(ciphertext) + \textcolor{stringliteral}{"'"})
+177             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Error'}
+178         retcode, opentext = getstatusoutput(
+179             \textcolor{stringliteral}{"echo "} + ciphertext + \textcolor{stringliteral}{"|base64 -d|openssl rsautl -inkey "}
+180             + config[\textcolor{stringliteral}{"private\_key\_path"}] + \textcolor{stringliteral}{" -decrypt"})
+181         Log(\textcolor{stringliteral}{"Retcode(decrypt): "} + str(retcode))
+182         \textcolor{keywordflow}{if} retcode == 0:
+183             \textcolor{keywordflow}{return} opentext
+184         \textcolor{keywordflow}{else}:
+185             \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Error'}
+186 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_ab2f222dfae5bd17058e6257f7ff71d87}\label{classisofc-service-2_1_1DeviceHandler_ab2f222dfae5bd17058e6257f7ff71d87}} 
+\index{isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}!Handle@{Handle}}
+\index{Handle@{Handle}!isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}}
+\subsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily def isofc-\/service-\/2.Device\+Handler.\+Handle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{action,  }\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция обработки состояний U\+SB устройства 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & -\/ действие, произведенное с устройством (add или remove) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+201     \textcolor{keyword}{def }Handle(self,action,device):
+202         \textcolor{keywordflow}{try}:
+203             Log(\textcolor{stringliteral}{"Action: "} + str(action) + \textcolor{stringliteral}{", "}
+204                 + \textcolor{stringliteral}{"DEVNAME: "} + str(device[\textcolor{stringliteral}{'DEVNAME'}]) + \textcolor{stringliteral}{", "}
+205                 + \textcolor{stringliteral}{"ID\_SERIAL: "} + str(device[\textcolor{stringliteral}{'ID\_SERIAL'}]) + \textcolor{stringliteral}{" "})
+206         \textcolor{keywordflow}{except}:
+207             Log(\textcolor{stringliteral}{"Fail on Port: "} + str(Port(device)) + \textcolor{stringliteral}{", "}
+208                 + \textcolor{stringliteral}{"Action: "} + str(action))
+209             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+210 
+211         \textcolor{keywordflow}{if} str(action) == \textcolor{stringliteral}{"add"}:
+212             retval, usbdirectory = self.UsbMount(device)
+213 
+214             \textcolor{keywordflow}{if} retval != 0:
+215                 Log(\textcolor{stringliteral}{"Cannot mount "} + str(device.device\_node))
+216                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+217 
+218             Log(str(device.device\_node) + \textcolor{stringliteral}{" mounted"})
+219 
+220             Credentials = self.CheckAuth(device, usbdirectory)
+221 
+222             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} Credentials[0]:
+223                 Log(Credentials[1])
+224             \textcolor{keywordflow}{else}:
+225                 Log(str(device.device\_node) + \textcolor{stringliteral}{", "}
+226                     + \textcolor{stringliteral}{"Login: "} + Credentials[1] + \textcolor{stringliteral}{", "}
+227                     + \textcolor{stringliteral}{"Serial: "} + Credentials[3])
+228 
+229                 smbConnect = SambaConnect(Credentials[1],Credentials[2],device,usbdirectory)
+230 
+231             \textcolor{keywordflow}{if} self.UsbUmount(device) != 0:
+232                 Log(str(device.device\_node) + \textcolor{stringliteral}{", failed umount"})
+233                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+234 
+235             Log(str(device.device\_node) + \textcolor{stringliteral}{" umounted"})
+236 
+237         \textcolor{keywordflow}{if} str(action) == \textcolor{stringliteral}{"remove"}:
+238             \textcolor{keywordflow}{pass}
+239 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a54a0e6f35c2bf9619c532a5940706655}\label{classisofc-service-2_1_1DeviceHandler_a54a0e6f35c2bf9619c532a5940706655}} 
+\index{isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}!Usb\+Mount@{Usb\+Mount}}
+\index{Usb\+Mount@{Usb\+Mount}!isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}}
+\subsubsection{\texorpdfstring{Usb\+Mount()}{UsbMount()}}
+{\footnotesize\ttfamily def isofc-\/service-\/2.Device\+Handler.\+Usb\+Mount (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция монтирования usb. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+189     \textcolor{keyword}{def }UsbMount(self,device):
+190         retval, output = getstatusoutput(\textcolor{stringliteral}{"pmount "} + device.device\_node)
+191         \textcolor{keywordflow}{return} [retval, re.sub(\textcolor{stringliteral}{r'dev'}, \textcolor{stringliteral}{'media'}, device.device\_node)]
+192 
+\end{DoxyCode}
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a72e367f0aca59a59e9374c8bda9b8806}\label{classisofc-service-2_1_1DeviceHandler_a72e367f0aca59a59e9374c8bda9b8806}} 
+\index{isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}!Usb\+Umount@{Usb\+Umount}}
+\index{Usb\+Umount@{Usb\+Umount}!isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}}
+\subsubsection{\texorpdfstring{Usb\+Umount()}{UsbUmount()}}
+{\footnotesize\ttfamily def isofc-\/service-\/2.Device\+Handler.\+Usb\+Umount (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{device }\end{DoxyParamCaption})}
+
+
+
+Функция размонтирования usb. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device} & -\/ устройство \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+195     \textcolor{keyword}{def }UsbUmount(self,device):
+196         retval, output = getstatusoutput(\textcolor{stringliteral}{"pumount "} + re.sub(\textcolor{stringliteral}{r'dev'}, \textcolor{stringliteral}{'media'}, device.device\_node))
+197         \textcolor{keywordflow}{return} retval
+198 
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classisofc-service-2_1_1DeviceHandler_a95f5cb075a653330abd901ce95f715a8}\label{classisofc-service-2_1_1DeviceHandler_a95f5cb075a653330abd901ce95f715a8}} 
+\index{isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}!Status\+Msg@{Status\+Msg}}
+\index{Status\+Msg@{Status\+Msg}!isofc-\/service-\/2\+::\+Device\+Handler@{isofc-\/service-\/2\+::\+Device\+Handler}}
+\subsubsection{\texorpdfstring{Status\+Msg}{StatusMsg}}
+{\footnotesize\ttfamily dictionary isofc-\/service-\/2.Device\+Handler.\+Status\+Msg\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}
+=  \{
+        \textcolor{stringliteral}{'Free'}: \textcolor{stringliteral}{'Free'},
+        \textcolor{stringliteral}{'Connected'}: \textcolor{stringliteral}{'Connected'},
+        \textcolor{stringliteral}{'Copying'}: \textcolor{stringliteral}{'Copying'},
+        \textcolor{stringliteral}{'Error'}: \textcolor{stringliteral}{'Error'},
+        \textcolor{stringliteral}{'MountError'}: \textcolor{stringliteral}{'Mount error'},
+        \textcolor{stringliteral}{'CopyError'}: \textcolor{stringliteral}{'Copy error'},
+        \textcolor{stringliteral}{'UmountError'}: \textcolor{stringliteral}{'Umount error'},
+        \textcolor{stringliteral}{'Connecting'}: \textcolor{stringliteral}{'Connecting'},
+        \textcolor{stringliteral}{'ConnectingError'}: \textcolor{stringliteral}{'Connecting error'},
+        \textcolor{stringliteral}{'AuthFileNotFoundError'}: \textcolor{stringliteral}{'No auth file'},
+        \textcolor{stringliteral}{'AuthSmbError'}: \textcolor{stringliteral}{'Check log or path'},
+        \textcolor{stringliteral}{'MoreOneLogin'}: \textcolor{stringliteral}{'Login in use'},
+        \textcolor{stringliteral}{'WrongAuthFileError'}: \textcolor{stringliteral}{'Wrong aut file'},
+        \textcolor{stringliteral}{'TransferError'}: \textcolor{stringliteral}{'Transfer error'},
+        \textcolor{stringliteral}{'DisconnectPlease'}: \textcolor{stringliteral}{'Done'},
+        \textcolor{stringliteral}{'DisconnectAddition'}: \textcolor{stringliteral}{', extract'},
+    \}
+\end{DoxyCode}
+
+
+Сообщения для вывода на дисплей 
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+isofc-\/service-\/2.\+py\end{DoxyCompactItemize}
