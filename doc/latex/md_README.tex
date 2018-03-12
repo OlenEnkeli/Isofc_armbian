@@ -1,32 +1,42 @@
-I\+S\+O\+FC for Arm\+Bian\+: система копирования с использованием сервера Samba 4
+S\+O\+FT for Arabian\+: The system of secure and authorized exchange of files between the usb device and Samba server
 
-Предназначена для использования в образовательных учреждениях и предприятиях, где использвуется защита от прямого использования U\+S\+B-\/накопителей
+Designed for use in educational organization and enterprises where used and irect mount and use U\+SB drives is prohibit prohibited because of information security requirements.
 
-Позволяет производить авторизацию флешки с помощью хэш-\/кода, содержашего логин и пароль пользователя
+For autintication of U\+SB drive isofc use a hash file containing the serial number of the U\+SB drive, user login and password
 
-Данный файл представляет собой сервис, который должен быть постоянно запущен на компьютере с доступом к S\+A\+M\+BA серверу
+This product is a service that must be constantly running on a computer with access to the S\+A\+M\+BA server
 
 Author\+: Klementyev Mikhail \href{mailto:jollheef@riseup.net}{\tt jollheef@riseup.\+net}
 
-Porting for armbian\+: Nicolskiy Anton \href{mailto:angeloffree@yandex.ru}{\tt angeloffree@yandex.\+ru}, Lutkovsky Dmitry $<$$>$, Voroshillo Dmitry $<$$>$
+Porting for armbian\+: Nicolskiy Anton \href{mailto:angeloffree@yandex.ru}{\tt angeloffree@yandex.\+ru}
 
-\subsubsection*{Deb-\/based(Debian, Ubuntu etc.)}
+\subsubsection*{Installing on deb based Linux OS}
 
-\begin{DoxyVerb}$ sudo apt-get install git libmono-i18n2.0-cil ironpython
-$ git clone https://github.com/jollheef/isofc/
-$ ipy ./isofc/isofc-client.ipy
+\begin{DoxyVerb}$ sudo apt install git python3 python3-pip samba samba-common python-glade2 system-config-samba
+$ sudo service smbd restart
+$ sudo pip3 install pyudev time simplejson configparser
+$ git clone https://github.com/OlenEnkeli/isofc_armbian
 \end{DoxyVerb}
 
 
-\subsubsection*{Windows}
+\subsubsection*{Installing on rpm based Linux OS}
 
-Скачиваем и устанавливаем \href{http://ironpython.net/download/}{\tt ironpython}
-
-Нажимаем Win + R (Пуск -\/$>$ Выполнить), выполняем \begin{DoxyVerb}C:\Program Files (x86)\IronPython 2.7\ipy.exe \путь\к\isofc-client.ipy
+\begin{DoxyVerb}$ sudo rpm install git python3 python3-pip samba samba-client samba-common
+$ sudo systemctl restart smb
+$ sudo pip3 install pyudev time simplejson configparser
+$ git clone https://github.com/OlenEnkeli/isofc_armbian
 \end{DoxyVerb}
 
 
-\paragraph*{Компиляция под Windows как автономное приложение}
+\subsubsection*{Установка на arch based системах}
 
-Как прикрутить иконку читать \href{http://stackoverflow.com/questions/4743578/how-can-i-add-a-custome-icon-to-executables-created-with-ironpython-pyc-py}{\tt тут} \begin{DoxyVerb}ipy.exe Tools\Scripts\pyc.py /main:C:\путь\к\isofc-client.ipy /standalone /embed /target:winexe\end{DoxyVerb}
- 
+\begin{DoxyVerb}$ sudo pacman -S git python python-pip samba
+$ sudo systemctl restart smbd
+$ sudo pip3 install pyudev time simplejson configparser
+$ git clone https://github.com/OlenEnkeli/isofc_armbian
+\end{DoxyVerb}
+
+
+Don\`{}t forget change configuration file and generate open and privacy R\+SA keys
+
+Net you will start ./isofc-\/service.py from cron or another way. 

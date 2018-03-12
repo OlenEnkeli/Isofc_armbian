@@ -66,21 +66,30 @@ $(function() {
 <div class="title">ISOFC for ArmBian </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>ISOFC for ArmBian: система копирования с использованием сервера Samba 4</p>
-<p>Предназначена для использования в образовательных учреждениях и предприятиях, где использвуется защита от прямого использования USB-накопителей</p>
-<p>Позволяет производить авторизацию флешки с помощью хэш-кода, содержашего логин и пароль пользователя</p>
-<p>Данный файл представляет собой сервис, который должен быть постоянно запущен на компьютере с доступом к SAMBA серверу</p>
+<div class="textblock"><p>SOFT for Arabian: The system of secure and authorized exchange of files between the usb device and Samba server</p>
+<p>Designed for use in educational organization and enterprises where used and irect mount and use USB drives is prohibit prohibited because of information security requirements.</p>
+<p>For autintication of USB drive isofc use a hash file containing the serial number of the USB drive, user login and password</p>
+<p>This product is a service that must be constantly running on a computer with access to the SAMBA server</p>
 <p>Author: Klementyev Mikhail <a href="#" onclick="location.href='mai'+'lto:'+'jol'+'lh'+'eef'+'@r'+'ise'+'up'+'.ne'+'t'; return false;">jollh<span style="display: none;">.nosp@m.</span>eef@<span style="display: none;">.nosp@m.</span>riseu<span style="display: none;">.nosp@m.</span>p.ne<span style="display: none;">.nosp@m.</span>t</a></p>
-<p>Porting for armbian: Nicolskiy Anton <a href="#" onclick="location.href='mai'+'lto:'+'ang'+'el'+'off'+'re'+'e@y'+'an'+'dex'+'.r'+'u'; return false;">angel<span style="display: none;">.nosp@m.</span>offr<span style="display: none;">.nosp@m.</span>ee@ya<span style="display: none;">.nosp@m.</span>ndex<span style="display: none;">.nosp@m.</span>.ru</a>, Lutkovsky Dmitry &lt;&gt;, Voroshillo Dmitry &lt;&gt;</p>
-<h3>Deb-based(Debian, Ubuntu etc.)</h3>
-<pre class="fragment">$ sudo apt-get install git libmono-i18n2.0-cil ironpython
-$ git clone https://github.com/jollheef/isofc/
-$ ipy ./isofc/isofc-client.ipy
-</pre><h3>Windows</h3>
-<p>Скачиваем и устанавливаем <a href="http://ironpython.net/download/">ironpython</a></p>
-<p>Нажимаем Win + R (Пуск -&gt; Выполнить), выполняем </p><pre class="fragment">C:\Program Files (x86)\IronPython 2.7\ipy.exe \путь\к\isofc-client.ipy
-</pre><h4>Компиляция под Windows как автономное приложение</h4>
-<p>Как прикрутить иконку читать <a href="http://stackoverflow.com/questions/4743578/how-can-i-add-a-custome-icon-to-executables-created-with-ironpython-pyc-py">тут</a> </p><pre class="fragment">ipy.exe Tools\Scripts\pyc.py /main:C:\путь\к\isofc-client.ipy /standalone /embed /target:winexe</pre> </div></div><!-- contents -->
+<p>Porting for armbian: Nicolskiy Anton <a href="#" onclick="location.href='mai'+'lto:'+'ang'+'el'+'off'+'re'+'e@y'+'an'+'dex'+'.r'+'u'; return false;">angel<span style="display: none;">.nosp@m.</span>offr<span style="display: none;">.nosp@m.</span>ee@ya<span style="display: none;">.nosp@m.</span>ndex<span style="display: none;">.nosp@m.</span>.ru</a></p>
+<h3>Installing on deb based Linux OS</h3>
+<pre class="fragment">$ sudo apt install git python3 python3-pip samba samba-common python-glade2 system-config-samba
+$ sudo service smbd restart
+$ sudo pip3 install pyudev time simplejson configparser
+$ git clone https://github.com/OlenEnkeli/isofc_armbian
+</pre><h3>Installing on rpm based Linux OS</h3>
+<pre class="fragment">$ sudo rpm install git python3 python3-pip samba samba-client samba-common
+$ sudo systemctl restart smb
+$ sudo pip3 install pyudev time simplejson configparser
+$ git clone https://github.com/OlenEnkeli/isofc_armbian
+</pre><h3>Установка на arch based системах</h3>
+<pre class="fragment">$ sudo pacman -S git python python-pip samba
+$ sudo systemctl restart smbd
+$ sudo pip3 install pyudev time simplejson configparser
+$ git clone https://github.com/OlenEnkeli/isofc_armbian
+</pre><p>Don`t forget change configuration file and generate open and privacy RSA keys</p>
+<p>Net you will start ./isofc-service.py from cron or another way. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Создано системой &#160;<a href="http://www.doxygen.org/index.html">
